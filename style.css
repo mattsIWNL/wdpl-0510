@@ -1,0 +1,86 @@
+html, body{
+    background: #999;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas {
+    width: 1px;
+  height: 1px;
+  position: relative;
+  filter: drop-shadow(0 0 1vmin #ffc);
+}
+
+.triangle {
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vmin;
+  height: 40vmin;
+  background: #ff5;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.bow {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 22%;
+    height: 12%;
+    background: black;
+    clip-path: polygon(0% 0%, 50% 42%, 100% 0%, 100% 100%, 50% 58%, 0% 100%);
+}
+
+.eye {
+    width: 25%;
+    height: 25%;
+    background: white;
+    border: 0.375vmin solid black;
+    border-radius: 2% 80% 2% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.eye::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 50%;
+    background: black;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 100%;
+}
+
+.tophat {
+    width: 4vmin;
+    height: 18vmin;
+    background: black;
+    position: absolute;
+    top: -19.5vmin;
+    transform: translate(-50%, -100%)
+}
+
+.tophat::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 280%;
+    height: 1.5vmin;
+    background: black;
+    bottom: 0;
+    left: -90%;
+}
+
